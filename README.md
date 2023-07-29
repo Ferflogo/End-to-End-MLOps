@@ -1,6 +1,22 @@
 # End-to-End-MLOps
 MLOps Development and Deployment
 
+## Structure
+
+END-TO-END-MLOPS
+   |-- .github
+   |   |-- workflows
+   |   |   |-- .gitkeep
+   |-- config
+   |   |-- config.yaml
+
+   
+   |   |   |-- com
+   |   |   |   |-- foxguardsolutions
+   |   |   |   |   |-- jonavon
+   |   |   |   |   |   |-- roman
+   |   |   |   |   |   |   |-- InterpretSteps.java
+
 
 ## Workflows
 
