@@ -3,15 +3,21 @@ MLOps Development and Deployment
 
 ## Structure
 
-#!/bin/bash
+```bash
+END-TO-END-MLOPS
+   |-- .github
+   |   |-- workflows
+   |   |   |-- .gitkeep
+   |-- config
+   |   |-- config.yaml
 
-#File: tree-md
-
-tree=$(tree -tf --noreport -I '*~' --charset ascii $1 |
-       sed -e 's/| \+/  /g' -e 's/[|`]-\+/ */g' -e 's:\(* \)\(\(.*/\)\([^/]\+\)\):\1[\4](\2):g')
-
-printf "# Project tree\n\n${tree}
-
+   
+   |   |   |-- com
+   |   |   |   |-- foxguardsolutions
+   |   |   |   |   |-- jonavon
+   |   |   |   |   |   |-- roman
+   |   |   |   |   |   |   |-- InterpretSteps.java
+```
 
 ## Workflows
 
