@@ -1,22 +1,55 @@
 # End-to-End-MLOps
 MLOps Development and Deployment
 
+Repo base on: [a link](https://www.youtube.com/watch?v=pxk1Fr33-L4&t=20s&ab_channel=KrishNaik) by Krish Naik
+
 ## Structure
 
 ```bash
 END-TO-END-MLOPS
+   |-- Dockerfile   # Create a Image with MLOps project
+   |-- app.py       # Application Interfaces
+   |-- main.py      # Run project pipeline -Data Ingestion
+   |                #                      -Data Validation
+   |                #                      -Data Transformation
+   |                #                      -Model Trainer
+   |                #                      -Model Evaluation
+   |-- setup.py
+   |-- template.py # Create folder and empty files with project Structure
+   |-- test.py
+   |-- params.yaml
+   |-- schema.yaml  # Input data format Columns, Types & Target
    |-- .github
    |   |-- workflows
-   |   |   |-- .gitkeep
-   |-- config
-   |   |-- config.yaml
-
-   
-   |   |   |-- com
-   |   |   |   |-- foxguardsolutions
-   |   |   |   |   |-- jonavon
-   |   |   |   |   |   |-- roman
-   |   |   |   |   |   |   |-- InterpretSteps.java
+   |   |   |-- main.yaml
+   |-- config/
+   |   |-- config.yaml      # Path of files for each stage
+   |-- logs/
+   |   |-- running_logs.log # File with console logs
+   |-- research/            # Runs each pipeline stage on a Jupyter Notebook
+   |   |-- trial.ipynb
+   |   |-- 01_data_ingestion.ipynb
+   |-- src/
+   |   |-- mlproject/
+   |   |   |-- components/
+   |   |   |   |-- data_ingestion.py
+   |   |   |-- config/
+   |   |   |   |-- configuration.py
+   |   |   |-- constants/
+   |   |   |   |-- __init__.py          # OS path for yaml files (config, schema, params)
+   |   |   |-- entity/
+   |   |   |   |-- config_entity.py     # Create class data (Need more info)
+   |   |   |-- pipeline/
+   |   |   |   |-- stage_01_data_ingestion.py   # Download input files as zip and unzip files
+   |   |   |   |-- stage_02_data_validation.py  # Validate data schema
+   |   |   |   |-- stage_03.py
+   |   |   |   |-- stage_04.py
+   |   |   |   |-- stage_05.py
+   |   |   |-- utils/
+   |   |   |   |-- common.py            # Validation for input type
+   |   |   |-- __init__.py              # Logger information
+   |-- templates/
+   |   |-- index.html
 ```
 
 ## Workflows
