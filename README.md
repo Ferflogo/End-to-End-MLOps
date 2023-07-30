@@ -1,7 +1,7 @@
 # End-to-End-MLOps
 MLOps Development and Deployment
 
-Repo base on: [a link](https://www.youtube.com/watch?v=pxk1Fr33-L4&t=20s&ab_channel=KrishNaik) by Krish Naik
+Repo base on: [Youtube Video](https://www.youtube.com/watch?v=pxk1Fr33-L4&t=20s&ab_channel=KrishNaik) by Krish Naik
 
 ## Structure
 
@@ -31,20 +31,23 @@ END-TO-END-MLOPS
    |   |-- trial.ipynb
    |   |-- 01_data_ingestion.ipynb
    |   |-- 02_data_validation.ipynb
+   |   |-- 03_data_transformation.ipynb
    |-- src/
    |   |-- mlproject/
-   |   |   |-- components/
-   |   |   |   |-- data_ingestion.py
+   |   |   |-- components/  # Define functions to be used on pipeline
+   |   |   |   |-- data_ingestion.py        # Download input files as zip and unzip
+   |   |   |   |-- data_validation.py       # Validate data schema and clean data
+   |   |   |   |-- data_transformation.py   # Run any transformation need for data and split it
    |   |   |-- config/
-   |   |   |   |-- configuration.py
+   |   |   |   |-- configuration.py     # Create directories, files and validate input functions (Is not use on main, mmm)
    |   |   |-- constants/
    |   |   |   |-- __init__.py          # OS path for yaml files (config, schema, params)
    |   |   |-- entity/
    |   |   |   |-- config_entity.py     # Create class data (Need more info)
-   |   |   |-- pipeline/
-   |   |   |   |-- stage_01_data_ingestion.py   # Download input files as zip and unzip files
-   |   |   |   |-- stage_02_data_validation.py  # Validate data schema
-   |   |   |   |-- stage_03.py
+   |   |   |-- pipeline/    # Run Stage and write Logs
+   |   |   |   |-- stage_01_data_ingestion.py       # Download input files as zip and unzip files
+   |   |   |   |-- stage_02_data_validation.py      # Validate data schema and clean data
+   |   |   |   |-- stage_03_data_transformation.py  # Run any transformation need for data and split it
    |   |   |   |-- stage_04.py
    |   |   |   |-- stage_05.py
    |   |   |-- utils/
