@@ -162,3 +162,8 @@ cython_debug/
 artifacts/*
 
 mlruns/*
+
+# Interface
+static/*
+templates/*
+app.py
