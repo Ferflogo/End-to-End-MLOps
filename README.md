@@ -16,6 +16,7 @@ END-TO-END-MLOPS
    |                #                      -Model Evaluation
    |-- setup.py
    |-- template.py # Create folder and empty files with project Structure
+   |-- requirements.txt # Libraries needed for code
    |-- test.py
    |-- params.yaml
    |-- schema.yaml  # Input data format Columns, Types & Target
@@ -29,6 +30,7 @@ END-TO-END-MLOPS
    |-- research/            # Runs each pipeline stage on a Jupyter Notebook
    |   |-- trial.ipynb
    |   |-- 01_data_ingestion.ipynb
+   |   |-- 02_data_validation.ipynb
    |-- src/
    |   |-- mlproject/
    |   |   |-- components/
@@ -52,6 +54,8 @@ END-TO-END-MLOPS
    |   |-- index.html
 ```
 
+<sup>[1](#structure) This folder structure is needed to run WorkFlows Library</sup>
+
 ## Workflows
 
 1. Update config.yaml
@@ -65,27 +69,31 @@ END-TO-END-MLOPS
 9. Update the app.py
 
 
-
-# How to run?
+# How to run by your self?
 ### STEPS:
 
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow
+git clone https://github.com/Ferflogo/End-to-End-MLOps.git
 ```
-### STEP 01- Create a conda environment after opening the repository
+
+<sup>[2](#jupyternb) If want to run code, but not implement the MLOps pipeline (WorkFlows), can be run everything from the jupyter notebooks.</sup>
+
+### STEP 01- Create an environment for python with conda or pyvenv
+
+Don't mess with base python XD
 
 ```bash
-conda create -n mlproj python=3.8 -y
+conda create -n mlops python=3.8 -y
 ```
 
 ```bash
-conda activate mlproj
+conda activate mlops
 ```
-
 
 ### STEP 02- install the requirements
+
 ```bash
 pip install -r requirements.txt
 ```
