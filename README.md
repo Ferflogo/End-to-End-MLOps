@@ -54,7 +54,7 @@ END-TO-END-MLOPS
    |   |-- index.html
 ```
 
-<sup>[1](#structure) This folder structure is needed to run WorkFlows Library</sup>
+<sup>[1](#structure) This folder structure is needed to run MLFlow Library</sup>
 
 ## Workflows
 
@@ -78,7 +78,7 @@ Clone the repository
 git clone https://github.com/Ferflogo/End-to-End-MLOps.git
 ```
 
-<sup>[2](#jupyternb) If want to run code, but not implement the MLOps pipeline (WorkFlows), can be run everything from the jupyter notebooks.</sup>
+<sup>[2](#jupyternb) If want to run code, but not implement the MLOps pipeline (MLFlow), can be run everything from the jupyter notebooks.</sup>
 
 ### STEP 01- Create an environment for python with conda or pyvenv
 
