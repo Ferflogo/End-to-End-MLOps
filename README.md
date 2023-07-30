@@ -32,12 +32,14 @@ END-TO-END-MLOPS
    |   |-- 01_data_ingestion.ipynb
    |   |-- 02_data_validation.ipynb
    |   |-- 03_data_transformation.ipynb
+   |   |-- 03_model_trainer.ipynb
    |-- src/
    |   |-- mlproject/
    |   |   |-- components/  # Define functions to be used on pipeline
    |   |   |   |-- data_ingestion.py        # Download input files as zip and unzip
    |   |   |   |-- data_validation.py       # Validate data schema and clean data
    |   |   |   |-- data_transformation.py   # Run any transformation need for data and split it
+   |   |   |   |-- model_trainer.py
    |   |   |-- config/
    |   |   |   |-- configuration.py     # Create directories, files and validate input functions (Is not use on main, mmm)
    |   |   |-- constants/
@@ -48,7 +50,7 @@ END-TO-END-MLOPS
    |   |   |   |-- stage_01_data_ingestion.py       # Download input files as zip and unzip files
    |   |   |   |-- stage_02_data_validation.py      # Validate data schema and clean data
    |   |   |   |-- stage_03_data_transformation.py  # Run any transformation need for data and split it
-   |   |   |   |-- stage_04.py
+   |   |   |   |-- stage_04_model_trainer.py
    |   |   |   |-- stage_05.py
    |   |   |-- utils/
    |   |   |   |-- common.py            # Validation for input type
